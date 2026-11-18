@@ -1,0 +1,147 @@
+<p align="center">
+  <img src="vita/vitasim-logo.png" width="420" alt="VitaSim">
+</p>
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/c03520a9-d736-4b85-93a1-ac1cd0078a6a" controls width="720"></video>
+  <p><a href="https://youtu.be/OS17Av9fnv4">Watch on YouTube</a></p>
+</div>
+
+<h1 align="center">VitaSim</h1>
+
+<p align="center">
+  <b>A life simulation engine for PlayStation Vita, compatible with The Sims Legacy Collection</b><br>
+  clean-room C99 &middot; SimAntics interpreter &middot; isometric renderer on vitaGL &middot; all expansion packs
+</p>
+
+---
+
+> The VitaSim logo is an original design inspired by The Sims. VitaSim is a fan project. It is not affiliated
+> with, endorsed or sponsored by Electronic Arts or Maxis. The Sims is a trademark of Electronic Arts Inc.
+> VitaSim contains no game files. To play, buy **The Sims Legacy Collection** on Steam or the Epic Games Store
+> and copy your own installed files to the Vita.
+
+## Table of Contents
+
+1. [Introduction](#1-introduction)
+2. [Status](#2-status)
+3. [Requirements](#3-requirements)
+4. [Installation](#4-installation)
+5. [Controls](#5-controls)
+6. [Known Issues](#6-known-issues)
+7. [License and Credits](#7-license-and-credits)
+8. [Support](#8-support)
+
+---
+
+## 1. Introduction
+
+VitaSim is a new engine, written in C99 from scratch, that reads the data files of The Sims (2000) as shipped in
+The Sims Legacy Collection and plays them on a PS Vita. The game's behaviour lives almost entirely in its data:
+objects, people and interactions are SimAntics behaviour trees inside the game's IFF files. VitaSim implements the
+parts the original program provided around that data, namely the SimAntics virtual machine and its primitives,
+the IFF/FAR loaders, the isometric lot renderer, the people (skeletal mesh) renderer, the sound engine, and the
+user interface, and aims to behave as closely as possible to the original PC game.
+
+The original screens are drawn 1:1 at 800x600 on the Vita's 960x544 display with a scrollable lot view, and the
+controls are mapped to the Vita's buttons, sticks and touch screen.
+
+## 2. Status
+
+Playable from the neighbourhood through every expansion pack's areas (Downtown, Vacation Island, Old Town,
+Studio Town, Magic Town), with live, buy and build modes, Create-A-Family, the family bin, the photo album,
+saving and loading.
+
+- Lots run at a stable 30 fps at speeds 1-3 on home lots (measured on the device); the user interface runs at 60 fps
+  outside lots.
+- 14 languages: English, French, German, Italian, Spanish, Dutch, Danish, Swedish, Norwegian, Finnish,
+  Portuguese, Polish, Japanese and Korean. Japanese uses the Vita's system font.
+- The app checks GitHub for new releases and can update itself.
+
+This is a work in progress: see [Known Issues](#6-known-issues).
+
+## 3. Requirements
+
+- A PS Vita with HENkaku / Ensō and VitaShell.
+- `ur0:data/external/libshacccg.suprx` (the runtime shader compiler used by vitaGL).
+- **The Sims Legacy Collection**, bought on Steam or the Epic Games Store (not included). The Complete Collection and other editions are
+  not supported.
+- About 2.5 GB free on the memory card for your installed files.
+
+## 4. Installation
+
+1. Download `VitaSim_vX.Y.Z.vpk` from the [latest release](../../releases/latest) and install it with VitaShell. **You only need the VPK**: the release's `lgpl-sources` and `relink-kit` zips are there for the LGPL licence of vitaGL / vitaShaRK (see [NOTICES.md](NOTICES.md)).
+2. Copy the files of your own Legacy Collection installation (for example
+   `C:\Program Files (x86)\Steam\steamapps\common\The Sims Legacy Collection`) to `ux0:data/vitasim/` on the
+   Vita, keeping the folder layout: `GameData`, `UIGraphics`, `SoundData`, `Music`, `ExpansionShared`,
+   `ExpansionPack` ... `ExpansionPack7`, `Downloads`, the `Template*` folders and `UserData`
+   (`UserData2` ... `UserData8` for the other neighbourhoods). `Sims.exe` is not needed.
+3. Start VitaSim. The first start builds a few caches and takes longer.
+
+### Fonts (optional, for the original look)
+
+The original game draws part of its text with Windows fonts, which cannot be distributed. Without them VitaSim uses
+a free stand-in (Comic Neue, SIL OFL 1.1) and the Vita's own system fonts, so every language works out of the box.
+For the original look, copy these files from the `C:\Windows\Fonts` folder of a Windows PC you own to
+`ux0:data/vitasim/Fonts/` (create the folder):
+
+| Language | Files | Used for |
+|---|---|---|
+| All languages | `comic.ttf` (Comic Sans MS) | buttons, labels, most of the interface |
+| All languages | `times.ttf`, `cour.ttf`, `lucon.ttf` (Times New Roman, Courier New, Lucida Console) | the few screens that use them |
+| Korean | `gulim.ttc` (Gulim) | all Korean text; VitaSim reads its built-in 13-pixel bitmaps, exactly like the original |
+| Japanese | none | always drawn with the Vita's Japanese system font |
+| English, French, German, Italian, Spanish, Dutch, Danish, Swedish, Norwegian, Finnish, Portuguese, Polish | none beyond the first two rows | most text comes from the game's own bitmap fonts |
+
+Restart VitaSim after copying.
+
+Saves are written to `ux0:data/vitasim/UserData*` in the original format. Port settings are in
+`ux0:data/vitasim/UserData/VitaOptions.txt`.
+
+**Updating:** when a newer release is out, the app offers it on the neighbourhood screen (Update / Close /
+Skip this version). It downloads the package, exits, and the update is in place the next time you start it.
+You can also install the new VPK with VitaShell. Your saves and settings stay in `ux0:data/vitasim/`.
+
+## 5. Controls
+
+| Input | Action |
+|---|---|
+| Left stick / touch drag | Move the cursor / scroll the lot (assignable in Settings) |
+| Cross | Click (confirm button; can be swapped with Circle in Settings) |
+| Circle | Back / cancel |
+| D-pad | Zoom and rotate (assignable); moves the highlight in menus and pie menus |
+| L / R | Floor up-down / wall mode |
+| Triangle / Square | Held modifiers for build tools (the original's Ctrl / Shift); Triangle sells the object in hand |
+| SELECT | Next game speed |
+| START | Pause |
+| PS button (or SELECT + START) | Settings: language, controls, graphics, family helpers, cheats, About |
+
+In dialogs the confirm button answers OK / Yes and the back button No / Cancel.
+
+## 6. Known Issues
+
+- Single-frame hitches remain at speed 3 and in the first minute after a lot opens.
+- When the lighting changes (6, 7, 18 and 19 o'clock) the whole view is redrawn at once and the game may pause for
+  about a tenth of a second.
+- Two Sims walking into an empty shower or toilet at the same moment can overlap for a moment.
+- Wall junction posts between cut and uncut walls are not drawn.
+- Some layouts overlap in Spanish, Finnish and Norwegian; the Japanese fame panel labels are not finished.
+- Swimming stop states, pets passing through standing pets, the family history panel and the tutorial's build-mode
+  tips are incomplete.
+- Translations: texts the game leaves untranslated show in English (a few are filled in by the port).
+
+Please report problems on the [issue tracker](https://github.com/Reyanon/VitaSim/issues): what you did, on which lot,
+and a screenshot if you can.
+
+## 7. License and Credits
+
+VitaSim is closed source. The parts by others and their licences are listed in [NOTICES.md](NOTICES.md); the
+licence texts are in [LICENSES](LICENSES).
+
+The Sims, its files and artwork are the property of Electronic Arts Inc. and are not part of this project.
+
+## 8. Support
+
+If you enjoy VitaSim, you can support its development on [Patreon](https://www.patreon.com/Reyanon) or Ko-fi:
+
+<a href="https://ko-fi.com/reyanon"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi"></a>
