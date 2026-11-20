@@ -36,12 +36,8 @@
 
 ## 1. Introduction
 
-VitaSim is a new engine, written in C99 from scratch, that reads the data files of The Sims (2000) as shipped in
-The Sims Legacy Collection and plays them on a PS Vita. The game's behaviour lives almost entirely in its data:
-objects, people and interactions are SimAntics behaviour trees inside the game's IFF files. VitaSim implements the
-parts the original program provided around that data, namely the SimAntics virtual machine and its primitives,
-the IFF/FAR loaders, the isometric lot renderer, the people (skeletal mesh) renderer, the sound engine, and the
-user interface, and aims to behave as closely as possible to the original PC game.
+VitaSim is a new engine, written from scratch for the PS Vita, that plays The Sims (2000) from the files of your
+own copy of The Sims Legacy Collection. It aims to look and behave as closely as possible to the original PC game.
 
 The original screens are drawn 1:1 at 800x600 on the Vita's 960x544 display with a scrollable lot view, and the
 controls are mapped to the Vita's buttons, sticks and touch screen.
@@ -52,8 +48,8 @@ Playable from the neighbourhood through every expansion pack's areas (Downtown, 
 Studio Town, Magic Town), with live, buy and build modes, Create-A-Family, the family bin, the photo album,
 saving and loading.
 
-- Lots run at a stable 30 fps at speeds 1-3 on home lots (measured on the device); the user interface runs at 60 fps
-  outside lots.
+- Lots run at 30 fps at speeds 1-3, using all four CPU cores; scrolling, floor changes and speed 3 stay smooth on
+  big lots. The user interface runs at 60 fps outside lots.
 - 14 languages: English, French, German, Italian, Spanish, Dutch, Danish, Swedish, Norwegian, Finnish,
   Portuguese, Polish, Japanese and Korean. Japanese uses the Vita's system font.
 - The app checks GitHub for new releases and can update itself.
@@ -120,9 +116,9 @@ In dialogs the confirm button answers OK / Yes and the back button No / Cancel.
 
 ## 6. Known Issues
 
-- Single-frame hitches remain at speed 3 and in the first minute after a lot opens.
-- When the lighting changes (6, 7, 18 and 19 o'clock) the whole view is redrawn at once and the game may pause for
-  about a tenth of a second.
+- Occasional short hitches remain, mostly in the first minute after a lot opens.
+- When a lamp is switched on, its light can take a moment to appear.
+- Placing an object on a counter sometimes needs the cursor slightly lower than in the original.
 - Two Sims walking into an empty shower or toilet at the same moment can overlap for a moment.
 - Wall junction posts between cut and uncut walls are not drawn.
 - Some layouts overlap in Spanish, Finnish and Norwegian; the Japanese fame panel labels are not finished.
