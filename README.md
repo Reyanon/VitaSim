@@ -48,8 +48,7 @@ Playable from the neighbourhood through every expansion pack's areas (Downtown, 
 Studio Town, Magic Town), with live, buy and build modes, Create-A-Family, the family bin, the photo album,
 saving and loading.
 
-- Lots run at 30 fps at speeds 1-3, using all four CPU cores; scrolling, floor changes and speed 3 stay smooth on
-  big lots. The user interface runs at 60 fps outside lots.
+- 60 fps by default (30 fps can be chosen in Options > Graphics), using all four CPU cores.
 - 14 languages: English, French, German, Italian, Spanish, Dutch, Danish, Swedish, Norwegian, Finnish,
   Portuguese, Polish, Japanese and Korean. Japanese uses the Vita's system font.
 - The app checks GitHub for new releases and can update itself.

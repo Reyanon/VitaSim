@@ -52,6 +52,19 @@ statically linked. Licence: [`LICENSES/LGPL-2.1.txt`](LICENSES/LGPL-2.1.txt).
 
 [JUnzip](https://github.com/jokkebk/JUnzip) by Joonas Pihlajamaa, released into the public domain.
 
+### CapUnlocker and CoreUnlocker80000H: MIT
+
+The app's kernel module opens the Vita's fourth CPU core for the app's threads the way
+[CapUnlocker](https://github.com/GrapheneCt/CapUnlocker) and CoreUnlocker80000H by GrapheneCt do: it hooks the
+system's CPU mask check at the same place, only where the code there is the known one (read on firmware 3.65), and
+gives it back when the app exits. Licence: [`LICENSES/MIT-CapUnlocker.txt`](LICENSES/MIT-CapUnlocker.txt).
+
+### Niotso: ISC
+
+The decoders for the game's object drawing groups (DGRP) and sprites (SPR2) follow the
+[Niotso](https://github.com/daddesio/Niotso) FileHandler implementation (dgrp.c, the SPR2 reference) by Fatbag,
+Niotso Project. Licence: [`LICENSES/ISC-Niotso.txt`](LICENSES/ISC-Niotso.txt).
+
 ## Certificates
 
 The update check uses the Mozilla CA certificate list (`cacert.pem`, Mozilla Public License 2.0, from
