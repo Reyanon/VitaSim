@@ -94,6 +94,7 @@ Restart VitaSim after copying.
 
 Custom objects, skins, walls and floors (CC) go into `ux0:data/vitasim/Downloads/`, as on the PC: copy your PC game's
 `Downloads` folder (subfolders are fine). The next start indexes them once; they then appear in Buy and Build mode.
+Hacks that replace game files go where their readme says (usually `GameData/Objects/` or `ExpansionShared/`), as on the PC.
 
 Saves are written to `ux0:data/vitasim/UserData*` in the original format. Port settings are in
 `ux0:data/vitasim/UserData/VitaOptions.txt`.
