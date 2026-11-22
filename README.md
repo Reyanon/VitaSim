@@ -90,6 +90,11 @@ For the original look, copy these files from the `C:\Windows\Fonts` folder of a 
 
 Restart VitaSim after copying.
 
+### Custom content (optional)
+
+Custom objects, skins, walls and floors (CC) go into `ux0:data/vitasim/Downloads/`, as on the PC: copy your PC game's
+`Downloads` folder (subfolders are fine). The next start indexes them once; they then appear in Buy and Build mode.
+
 Saves are written to `ux0:data/vitasim/UserData*` in the original format. Port settings are in
 `ux0:data/vitasim/UserData/VitaOptions.txt`.
 
