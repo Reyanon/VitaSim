@@ -111,6 +111,13 @@ You can also install the new VPK with VitaShell. Your saves and settings stay in
 | START | Pause |
 | PS button (or SELECT + START) | Settings: language, controls, graphics, family helpers, cheats, About |
 
+**Touch trackpad mode** (asked at first start, Settings > Controls): one finger moves the cursor and taps to click,
+two fingers right-click or drag to scroll, three fingers rotate (swipe left/right), change floors (swipe up/down)
+and zoom (pinch). The panel, the action queue and dialogs stay direct touch.
+
+**Bluetooth mouse and keyboard** (pair them in the Vita's settings; the keyboard is tested, the mouse not yet on a real device): the PC game's controls — right click, hold the
+right button to scroll, wheel to zoom, F1-F5 modes, Ctrl+S to save, and typing in name fields.
+
 In dialogs the confirm button answers OK / Yes and the back button No / Cancel.
 
 ## 6. Known Issues
