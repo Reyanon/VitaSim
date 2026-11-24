@@ -45,8 +45,14 @@
 VitaSim is a new engine, written from scratch for the PS Vita, that plays The Sims (2000) from the files of your
 own copy of The Sims Legacy Collection. It aims to look and behave as closely as possible to the original PC game.
 
-The original screens are drawn 1:1 at 800x600 on the Vita's 960x544 display with a scrollable lot view, and the
-controls are mapped to the Vita's buttons, sticks and touch screen.
+Two interfaces, switchable at any time in Settings > Basic (chosen on the first start, with a preview of both):
+
+- **VitaSim UI** - a touch-first interface made for the Vita's screen: large buttons on the screen edges, status
+  panels that can become movable windows, a fast item shelf for Buy and Build mode (categories, favourites,
+  recent items, custom content, eyedropper, place again) and an eye button that hides the interface.
+- **Original** - the original screens drawn 1:1 at 800x600 on the Vita's 960x544 display with a scrollable lot view.
+
+Both are controlled with the Vita's buttons, sticks and touch screen.
 
 ## 2. Status
 
@@ -105,8 +111,9 @@ Hacks that replace game files go where their readme says (usually `GameData/Obje
 Saves are written to `ux0:data/vitasim/UserData*` in the original format. Port settings are in
 `ux0:data/vitasim/UserData/VitaOptions.txt`.
 
-**Updating:** when a newer release is out, the app offers it on the neighbourhood screen (Update / Close /
-Skip this version). It downloads the package, exits, and the update is in place the next time you start it.
+**Updating:** when a newer release is out, the app offers it on the neighbourhood screen (Install / Skip this
+version / Later); Settings > Basic > Check for updates works on a lot too, and asks to save the game first. It
+downloads the package, exits, and the update is in place the next time you start it.
 You can also install the new VPK with VitaShell. Your saves and settings stay in `ux0:data/vitasim/`.
 
 ## 5. Controls
@@ -123,9 +130,10 @@ You can also install the new VPK with VitaShell. Your saves and settings stay in
 | START | Pause |
 | PS button (or SELECT + START) | Settings: language, controls, graphics, family helpers, cheats, About |
 
-**Touch trackpad mode** (asked at first start, Settings > Controls): one finger moves the cursor and taps to click,
-two fingers right-click or drag to scroll, three fingers rotate (swipe left/right), change floors (swipe up/down)
-and zoom (pinch). The panel, the action queue and dialogs stay direct touch.
+**Touch: direct or trackpad** (switch with the first button of the VitaSim UI's bottom bar, or in Settings > Controls).
+Direct touch: tap and drag on the screen itself. Trackpad mode: one finger moves the cursor and taps to click,
+two fingers right-click or drag to scroll, three fingers rotate (swipe left/right) and change floors (swipe
+up/down); the interface's own buttons and panels stay direct touch. In both modes, pinch with two fingers to zoom.
 
 **Bluetooth mouse and keyboard** (pair them in the Vita's settings; the keyboard is tested, the mouse not yet on a real device): the PC game's controls — right click, hold the
 right button to scroll, wheel to zoom, F1-F5 modes, Ctrl+S to save, and typing in name fields.
@@ -134,15 +142,7 @@ In dialogs the confirm button answers OK / Yes and the back button No / Cancel.
 
 ## 6. Known Issues
 
-- Occasional short hitches remain, mostly in the first minute after a lot opens.
-- When a lamp is switched on, its light can take a moment to appear.
-- Placing an object on a counter sometimes needs the cursor slightly lower than in the original.
-- Two Sims walking into an empty shower or toilet at the same moment can overlap for a moment.
-- Wall junction posts between cut and uncut walls are not drawn.
-- Some layouts overlap in Spanish, Finnish and Norwegian; the Japanese fame panel labels are not finished.
-- Swimming stop states, pets passing through standing pets, the family history panel and the tutorial's build-mode
-  tips are incomplete.
-- Translations: texts the game leaves untranslated show in English (a few are filled in by the port).
+VitaSim is a work in progress. Occasional short hitches remain, mostly in the first minute after a lot opens.
 
 Please report problems on the [issue tracker](https://github.com/Reyanon/VitaSim/issues): what you did, on which lot,
 and a screenshot if you can.
