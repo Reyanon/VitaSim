@@ -7,6 +7,12 @@
   <p><a href="https://youtu.be/OS17Av9fnv4">Watch on YouTube</a></p>
 </div>
 
+<br>
+
+<div align="center">
+  <img width="960" height="544" alt="2026-11-24-173219_1" src="https://github.com/user-attachments/assets/917b311f-223a-4421-afa4-1e17489b7be2" />
+</div>
+
 <h1 align="center">VitaSim</h1>
 
 <p align="center">
