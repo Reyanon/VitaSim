@@ -1,0 +1,67 @@
+name: Game problem
+description: Something in the game does not work or differs from the PC game (Sims, objects, lots, saving, travel)
+labels: ["game"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Problem
+      options:
+        - Crash / freeze
+        - Sims or objects behave wrong
+        - Graphics
+        - Sound
+        - Saving / loading
+        - Travel / neighbourhood
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: lot
+    attributes:
+      label: Neighbourhood and lot
+      description: For example "Neighbourhood 1, house 77" or "Downtown lot 24"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you see, and what the PC game does instead
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to see it
+      placeholder: |
+        1. Open ...
+        2. Select ...
+  - type: input
+    id: version
+    attributes:
+      label: VitaSim version
+      description: Shown in Settings > About (for example v0.16.4)
+    validations:
+      required: true
+  - type: dropdown
+    id: ui
+    attributes:
+      label: Interface
+      options:
+        - VitaSim UI
+        - Original
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - PS Vita 1000 (OLED)
+        - PS Vita 2000 (Slim)
+        - PS TV
+    validations:
+      required: true
+  - type: textarea
+    id: shots
+    attributes:
+      label: Screenshot or video (optional)

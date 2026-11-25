@@ -1,0 +1,10 @@
+name: Request
+description: A feature or a change you would like
+labels: ["request"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What you would like
+    validations:
+      required: true
