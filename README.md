@@ -61,8 +61,9 @@ Studio Town, Magic Town), with live, buy and build modes, Create-A-Family, the f
 saving and loading.
 
 - 60 fps by default (30 fps can be chosen in Options > Graphics), using all four CPU cores.
-- 14 languages: English, French, German, Italian, Spanish, Dutch, Danish, Swedish, Norwegian, Finnish,
-  Portuguese, Polish, Japanese and Korean. Japanese uses the Vita's system font.
+- 16 languages: English, French, German, Italian, Spanish, Dutch, Danish, Swedish, Norwegian, Finnish,
+  Portuguese, Polish, Japanese, Korean, Simplified Chinese and Traditional Chinese. Japanese and Chinese use the
+  Vita's system font; text the game has no translation for is shown in English.
 - The app checks GitHub for new releases and can update itself.
 
 This is a work in progress: see [Known Issues](#6-known-issues).
@@ -106,6 +107,7 @@ Restart VitaSim after copying.
 
 Custom objects, skins, walls and floors (CC) go into `ux0:data/vitasim/Downloads/`, as on the PC: copy your PC game's
 `Downloads` folder (subfolders are fine). The next start indexes them once; they then appear in Buy and Build mode.
+With a large folder (thousands of files) the first start and the first lot take a few minutes; later starts are quick.
 Hacks that replace game files go where their readme says (usually `GameData/Objects/` or `ExpansionShared/`), as on the PC.
 
 Saves are written to `ux0:data/vitasim/UserData*` in the original format. Port settings are in
