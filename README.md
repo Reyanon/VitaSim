@@ -16,7 +16,7 @@
 <h1 align="center">VitaSim</h1>
 
 <p align="center">
-  <b>A life simulation engine for PlayStation Vita, compatible with The Sims Legacy Collection</b><br>
+  <b>A life simulation engine for PlayStation Vita, compatible with The Sims Legacy Collection and The Sims Complete Collection</b><br>
   clean-room C99 &middot; SimAntics interpreter &middot; isometric renderer on vitaGL &middot; all expansion packs
 </p>
 
@@ -25,7 +25,7 @@
 > The VitaSim logo is an original design inspired by The Sims. VitaSim is a fan project. It is not affiliated
 > with, endorsed or sponsored by Electronic Arts or Maxis. The Sims is a trademark of Electronic Arts Inc.
 > VitaSim contains no game files. To play, buy **The Sims Legacy Collection** on Steam or the Epic Games Store
-> and copy your own installed files to the Vita.
+> (or use your own **The Sims Complete Collection**) and copy your own installed files to the Vita.
 
 ## Table of Contents
 
@@ -43,7 +43,7 @@
 ## 1. Introduction
 
 VitaSim is a new engine, written from scratch for the PS Vita, that plays The Sims (2000) from the files of your
-own copy of The Sims Legacy Collection. It aims to look and behave as closely as possible to the original PC game.
+own copy of The Sims Legacy Collection or The Sims Complete Collection. It aims to look and behave as closely as possible to the original PC game.
 
 Two interfaces, switchable at any time in Settings > Basic (chosen on the first start, with a preview of both):
 
@@ -72,16 +72,16 @@ This is a work in progress: see [Known Issues](#6-known-issues).
 
 - A PS Vita with HENkaku / Ensō and VitaShell.
 - `ur0:data/external/libshacccg.suprx` (the runtime shader compiler used by vitaGL).
-- **The Sims Legacy Collection**, bought on Steam or the Epic Games Store (not included). The Complete Collection and other editions are
-  not supported.
+- **The Sims Legacy Collection** (Steam or the Epic Games Store) or **The Sims Complete Collection**, your own copy
+  (not included).
 - About 2.5 GB free on the memory card for your installed files.
 
 ## 4. Installation
 
 1. Download `VitaSim_vX.Y.Z.vpk` from the [latest release](../../releases/latest) and install it with VitaShell. **You only need the VPK**: the release's `lgpl-sources` and `relink-kit` zips are there for the LGPL licence of vitaGL / vitaShaRK (see [NOTICES.md](NOTICES.md)).
-2. Copy the files of your own Legacy Collection installation (for example
-   `C:\Program Files (x86)\Steam\steamapps\common\The Sims Legacy Collection`) to `ux0:data/vitasim/` on the
-   Vita, keeping the folder layout: `GameData`, `UIGraphics`, `SoundData`, `Music`, `ExpansionShared`,
+2. Copy the files of your own installation (Legacy Collection, for example
+   `C:\Program Files (x86)\Steam\steamapps\common\The Sims Legacy Collection`; Complete Collection, for example
+   `C:\Program Files (x86)\Maxis\The Sims`) to `ux0:data/vitasim/` on the Vita, keeping the folder layout: `GameData`, `UIGraphics`, `SoundData`, `Music`, `ExpansionShared`,
    `ExpansionPack` ... `ExpansionPack7`, `Downloads`, the `Template*` folders and `UserData`
    (`UserData2` ... `UserData8` for the other neighbourhoods). `Sims.exe` is not needed.
 3. Start VitaSim. The first start builds a few caches and takes longer.
@@ -114,7 +114,8 @@ Saves are written to `ux0:data/vitasim/UserData*` in the original format, so the
 game: the `UserData` folders (neighbourhoods, houses, families) can be copied from the PC to the Vita and back.
 On the PC the Legacy Collection keeps them in `C:\Users\<you>\Saved Games\Electronic Arts\The Sims 25\`
 (`UserData`, `UserData2` ... `UserData8`), not in the game's install folder (that one only holds the starting
-neighbourhood). To move a neighbourhood, fully close VitaSim and replace the whole `UserData` folder on the other side.
+neighbourhood). The Complete Collection keeps them in its install folder (`Maxis\The Sims\UserData*`); on Windows
+Vista and later look first in `C:\Users\<you>\AppData\Local\VirtualStore\Program Files (x86)\Maxis\The Sims\`. To move a neighbourhood, fully close VitaSim and replace the whole `UserData` folder on the other side.
 Port settings are in `ux0:data/vitasim/UserData/VitaOptions.txt`.
 
 **Updating:** when a newer release is out, the app offers it on the neighbourhood screen (Install / Skip this
