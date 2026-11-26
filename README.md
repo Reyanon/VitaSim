@@ -112,6 +112,9 @@ Hacks that replace game files go where their readme says (usually `GameData/Obje
 
 Saves are written to `ux0:data/vitasim/UserData*` in the original format, so they are compatible with the PC
 game: the `UserData` folders (neighbourhoods, houses, families) can be copied from the PC to the Vita and back.
+On the PC the Legacy Collection keeps them in `C:\Users\<you>\Saved Games\Electronic Arts\The Sims 25\`
+(`UserData`, `UserData2` ... `UserData8`), not in the game's install folder (that one only holds the starting
+neighbourhood). To move a neighbourhood, fully close VitaSim and replace the whole `UserData` folder on the other side.
 Port settings are in `ux0:data/vitasim/UserData/VitaOptions.txt`.
 
 **Updating:** when a newer release is out, the app offers it on the neighbourhood screen (Install / Skip this
