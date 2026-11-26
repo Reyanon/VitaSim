@@ -114,8 +114,8 @@ Saves are written to `ux0:data/vitasim/UserData*` in the original format, so the
 game: the `UserData` folders (neighbourhoods, houses, families) can be copied from the PC to the Vita and back.
 On the PC the Legacy Collection keeps them in `C:\Users\<you>\Saved Games\Electronic Arts\The Sims 25\`
 (`UserData`, `UserData2` ... `UserData8`), not in the game's install folder (that one only holds the starting
-neighbourhood). The Complete Collection keeps them in its install folder (`Maxis\The Sims\UserData*`); on Windows
-Vista and later look first in `C:\Users\<you>\AppData\Local\VirtualStore\Program Files (x86)\Maxis\The Sims\`. To move a neighbourhood, fully close VitaSim and replace the whole `UserData` folder on the other side.
+neighbourhood). Other editions (Complete Collection etc.) keep them in `Maxis\The Sims\UserData*`.
+To move a neighbourhood, fully close VitaSim and replace the whole `UserData` folder on the other side.
 Port settings are in `ux0:data/vitasim/UserData/VitaOptions.txt`.
 
 **Updating:** when a newer release is out, the app offers it on the neighbourhood screen (Install / Skip this
