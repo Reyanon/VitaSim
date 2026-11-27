@@ -115,7 +115,15 @@ game: the `UserData` folders (neighbourhoods, houses, families) can be copied fr
 On the PC the Legacy Collection keeps them in `C:\Users\<you>\Saved Games\Electronic Arts\The Sims 25\`
 (`UserData`, `UserData2` ... `UserData8`), not in the game's install folder (that one only holds the starting
 neighbourhood). Other editions (Complete Collection etc.) keep them in `Maxis\The Sims\UserData*`.
-To move a neighbourhood, fully close VitaSim and replace the whole `UserData` folder on the other side.
+To move a neighbourhood, fully close VitaSim and replace the whole `UserData` folder on the other side (copy the
+whole folder, not single house files: the houses and `Neighborhood.iff` belong together).
+
+**Moving a single family** works as in the PC game: families are exported as `.FAM` files to the neighbourhood's
+`Export` folder (after Create-A-Family, eviction or import; VitaSim also has an Export Family button in the family
+bin). To bring a family over, copy its `.FAM` file into `ux0:data/vitasim/UserData/Import/` (or from the PC's
+`UserData\Export` folder into the Vita's `Import` folder), open that neighbourhood and press the Import button; one
+"Import Family" box appears per file. A family exported with its house moves in on its old lot number. The other
+neighbourhoods' `Export` files are offered too.
 Port settings are in `ux0:data/vitasim/UserData/VitaOptions.txt`.
 
 **Updating:** when a newer release is out, the app offers it on the neighbourhood screen (Install / Skip this
@@ -150,6 +158,11 @@ In dialogs the confirm button answers OK / Yes and the back button No / Cancel.
 ## 6. Known Issues
 
 VitaSim is a work in progress. Occasional short hitches remain, mostly in the first minute after a lot opens.
+
+**Weather hacks may be too slow to play on the Vita.** Custom content that adds weather to lots (for example the
+Weathercast package: rain / fog starters that fill the lot with hundreds of cloud objects) runs a lot of game script
+every tick; on the Vita a lot with active weather can drop to a few frames per second. If a lot becomes very slow,
+remove the weather hack's folder from `ux0:data/vitasim/Downloads/`.
 
 Please report problems on the [issue tracker](https://github.com/Reyanon/VitaSim/issues): what you did, on which lot,
 and a screenshot if you can.
